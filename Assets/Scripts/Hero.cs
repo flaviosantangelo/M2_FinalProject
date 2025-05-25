@@ -25,7 +25,7 @@ public class Hero
     public void SetName(string name) => this.name = name;
     
     public int GetHp() => hp;
-    public void SetHp(int hp) => this.hp = hp < 0 ? 0 : hp;
+    public void SetHp(int hp) => this.hp = Mathf.Max(0 , hp);
 
     public Stats GetBaseStats() => baseStats;
     public void SetBaseStats(Stats baseStats) => this.baseStats = baseStats;
